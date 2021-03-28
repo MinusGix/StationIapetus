@@ -685,7 +685,7 @@ impl BaseLevel {
             lights,
             death_zones,
             spawn_points,
-            navmesh: scene.navmeshes.handle_from_index(0),
+            navmesh: scene.navmeshes.handle_from_index(0).unwrap_or(Handle::NONE),
             scene: Handle::NONE, // Filled when scene will be moved to engine.
             sender: Some(sender),
             time: 0.0,
